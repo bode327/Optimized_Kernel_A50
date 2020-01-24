@@ -14,7 +14,7 @@ NAME=Optimized_Kernel
 
 export ANDROID_MAJOR_VERSION=p
 export ARCH=arm64
-export LOCALVERSION=-${VERSION}-${NAME}
+export LOCALVERSION=-${VERSION}-${NAME}_${DATE}
 
 KERNEL_PATH=$(pwd)
 KERNEL_ZIP=${KERNEL_PATH}/zip_kernel
@@ -23,7 +23,7 @@ KERNEL_IMAGE=${KERNEL_ZIP}/Image
 DT_IMG=${KERNEL_ZIP}/dtb*.img
 OUTPUT_PATH=${KERNEL_PATH}/output
 
-export CROSS_COMPILE=/home/bode/Downloads/AOSP-GCC-4.9-master/bin/aarch64-linux-android-
+export CROSS_COMPILE=/home/bode/GCC/GCC_4.9/bin/aarch64-linux-android-
 #export CROSS_COMPILE=/home/bode/Downloads/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-7.5.0-9.0/bin/aarch64-linux-gnu-
 
 JOBS=`grep processor /proc/cpuinfo | wc -l`
